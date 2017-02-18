@@ -1,8 +1,10 @@
 #! env python
 # -*- coding: UTF-8 -*-
 
-import argparse
 import os
+
+import argparse
+
 import colors
 
 directory = os.path.expanduser("~") + "/.colors"
@@ -17,10 +19,7 @@ parser.add_argument("-t", "--type", default="normal",
 
 parser.add_argument("text", type=str, help="the text to prettyEcho")
 
-args = parser.parse_args()
-color = args.color
-type = args.type
-text = args.text
+
 
 
 def getKey(color, type):
@@ -39,8 +38,18 @@ def getKey(color, type):
         return "white"
 
 
-key = getKey(color, type)
-colorMod = colors.colorDictionary[key]
+def main():
 
-print colorMod+text
+    args = parser.parse_args()
+    color = args.color
+    type = args.type
+    text = args.text
 
+    key = getKey(color, type)
+    colorMod = colors.COLORS[key]
+
+    print colorMod + text
+
+
+if __name__ == '__main__':
+    main()

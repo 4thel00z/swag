@@ -1,12 +1,14 @@
 # -*- coding: UTF-8 -*-
 import os
-import setPermission
 
 import colors
 
 
 directory = os.path.expanduser("~")+"/.colors"
-colorDictionary=colors.colorDictionary
+colorDictionary= colors.COLORS
+
+if not os.path.exists(directory):
+    os.makedirs(directory)
 
 
 for i, key in enumerate(colorDictionary):
@@ -14,7 +16,3 @@ for i, key in enumerate(colorDictionary):
     file = open( directory+"/"+key+".txt" , "w" )
     file.write( colorDictionary[key] )
     file.close()
-
-
-if not os.path.exists(directory):
-    os.makedirs(directory)
