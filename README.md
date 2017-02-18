@@ -1,6 +1,9 @@
 # Swag
 
 Color your shell output with escape code magic.
+
+![Demo](https://media.giphy.com/media/l0O5ASEoXnoaMd3S8/source.gif)
+
 ## Installation
 
 `pip install swag`
