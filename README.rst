@@ -13,19 +13,16 @@ Usage
 
 ::
 
-    usage: swag [-h] [-c COLOR] [-t TYPE] text
+    usage: swag [-h] {print,install} ...
 
     positional arguments:
-      text                  the text to prettyEcho
+      {print,install}  [command] help
+        install        install the colors to the folder of choice
+        print          prints the text with the specified color and type to the
+                       console
 
     optional arguments:
-      -h, --help            show this help message and exit
-      -c COLOR, --color COLOR
-                            default = white - which color to format the text in :
-                            black|red|green|yellow|blue|purple|cyan|white
-      -t TYPE, --type TYPE  default = normal - format the string with either: norm
-                            al|underline|background|bold|intense|intenseBold|inten
-                            seBackground
+      -h, --help       show this help message and exit
 
 Raw Usage
 ---------
@@ -38,14 +35,16 @@ Use from code
     from swag import colors
     print colors.COLORS["red"], "This will be red"
 
-Installation
-~~~~~~~~~~~~
+Installation to a folder
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+From the commandline do
 
 ::
 
-    from swag import createFolders
+    swag install -d <path/to/folder> # default is ~/.colors
 
-This will install all the escape codes to the ~/.colors folder.
+This will install all the escape codes to the ~/.colors or folder.
 
 Now you can use the colors directly from the console via:
 
