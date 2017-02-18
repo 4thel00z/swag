@@ -1,13 +1,9 @@
 # -*- coding: UTF-8 -*-
 import os
-
-import os
-import stat
+import setPermission
 
 import colors
 
-st = os.stat('prettyEcho.py')
-os.chmod('prettyEcho.py', st.st_mode | stat.S_IEXEC)
 
 directory = os.path.expanduser("~")+"/.colors"
 colorDictionary=colors.colorDictionary
