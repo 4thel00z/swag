@@ -1,7 +1,10 @@
 Swag
 ====
 
-Color your shell output with escape code magic. ## Installation
+Color your shell output with escape code magic.
+
+Installation
+============
 
 ``pip install swag``
 
