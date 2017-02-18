@@ -4,15 +4,20 @@ import os
 import colors
 
 
-directory = os.path.expanduser("~")+"/.colors"
-colorDictionary= colors.COLORS
 
-if not os.path.exists(directory):
-    os.makedirs(directory)
+def install(dest = "default"):
+    if dest == "default":
+        directory = os.path.expanduser("~") + "/.colors"
+    else :
+        directory = dest
 
+    colorDictionary = colors.COLORS
 
-for i, key in enumerate(colorDictionary):
-    print key
-    file = open( directory+"/"+key+".txt" , "w" )
-    file.write( colorDictionary[key] )
-    file.close()
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    for i, key in enumerate(colorDictionary):
+        print colors.COLORS["reset"] + colors.COLORS[key] + "Installed "+ directory + "/"+ key + colors.COLORS["reset"]
+        file = open(directory + "/" + key, "w")
+        file.write(colorDictionary[key])
+        file.close()
