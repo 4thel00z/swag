@@ -1,15 +1,15 @@
-# PrettyEcho
+# Swag
 
 Color your shell output with escape code magic.
+## Installation
+
+`pip install swag`
 
 ## Usage
 
-Use the prettyEcho command, directly or symlink it via:
-
-`ln -s $(pwd)/prettyEcho.py /usr/local/bin/prettyEcho`
 
 ```
-usage: prettyEcho.py [-h] [-c COLOR] [-t TYPE] text
+usage: swag [-h] [-c COLOR] [-t TYPE] text
 
 positional arguments:
   text                  the text to prettyEcho
@@ -26,10 +26,21 @@ optional arguments:
 
 ## Raw Usage
 
-### Installation
-Run the createFolder.py script via:
 
-`python createFolder.py`
+
+### Use from code
+
+```
+from swag import colors
+print colors.COLORS["red"], "This will be red"
+```
+
+### Installation
+
+
+```
+from swag import createFolders
+```
 
 This will install all the escape codes to the ~/.colors folder.
 
