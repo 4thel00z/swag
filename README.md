@@ -1,12 +1,18 @@
-PrettyEcho
+# PrettyEcho
 
-Color your shell output with escape code magic:
+Color your shell output with escape code magic.
 
-Run the createFolder.py script via.
+
+## Installation
+Run the createFolder.py script via:
 
 `python createFolder.py`
 
-Then use the prettyEcho command, directly or symlink it via:
+This will install all the escape codes to the ~/.colors folder.
+
+## Usage
+
+Use the prettyEcho command, directly or symlink it via:
 
 `ln -s $(pwd)/prettyEcho.py /usr/local/bin/prettyEcho`
 
@@ -23,4 +29,10 @@ optional arguments:
                         black|red|green|yellow|blue|purple|cyan|white
   -t TYPE, --type TYPE  default = normal - format the string with either: norm
                         al|underline|background|bold|intense|intenseBold|inten
-                        seBackground```
+                        seBackground
+```
+
+## Raw Usage
+You could also use the colors directly via :
+
+`echo $(cat ~/.colors/blue.txt) This will be blue`
