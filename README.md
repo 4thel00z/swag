@@ -4,9 +4,17 @@ Color your shell output with escape code magic.
 
 ## Usage
 
+Run set permission via: 
+
+`python setPermission.py`
+
+or alternatively set permissions via chmod:
+
+`sudo chmod +x swag.py`
+
 Use the prettyEcho command, directly or symlink it via:
 
-`ln -s $(pwd)/prettyEcho.py /usr/local/bin/prettyEcho`
+`ln -s $(pwd)/swag.py /usr/local/bin/swag`
 
 ```
 usage: prettyEcho.py [-h] [-c COLOR] [-t TYPE] text
