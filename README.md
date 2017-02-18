@@ -1,6 +1,6 @@
 # Swag
 
-Color your shell output with escape code magic.
+Swag up your shell output with escape code magic!
 
 ## Usage
 
