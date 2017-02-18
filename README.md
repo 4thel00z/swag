@@ -2,13 +2,13 @@ PrettyEcho
 
 Color your shell output with escape code magic:
 
-Run the createFolder.py script via:
+Run the createFolder.py script via.
 
 `python createFolder.py`
 
 Then use the prettyEcho command, directly or symlink it via:
 
-ln -s $(pwd)/prettyEcho.py /usr/local/bin/prettyEcho
+`ln -s $(pwd)/prettyEcho.py /usr/local/bin/prettyEcho`
 
 ```
 usage: prettyEcho.py [-h] [-c COLOR] [-t TYPE] text
