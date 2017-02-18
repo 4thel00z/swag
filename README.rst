@@ -48,4 +48,4 @@ This will install all the escape codes to the ~/.colors or folder.
 
 Now you can use the colors directly from the console via:
 
-``echo $(cat ~/.colors/blue.txt) This will be blue``
+``echo $(cat ~/.colors/blue) This will be blue``
