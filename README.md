@@ -2,14 +2,6 @@
 
 Color your shell output with escape code magic.
 
-
-## Installation
-Run the createFolder.py script via:
-
-`python createFolder.py`
-
-This will install all the escape codes to the ~/.colors folder.
-
 ## Usage
 
 Use the prettyEcho command, directly or symlink it via:
@@ -33,6 +25,14 @@ optional arguments:
 ```
 
 ## Raw Usage
-You could also use the colors directly via :
+
+### Installation
+Run the createFolder.py script via:
+
+`python createFolder.py`
+
+This will install all the escape codes to the ~/.colors folder.
+
+Now you can use the colors directly from the console via:
 
 `echo $(cat ~/.colors/blue.txt) This will be blue`
