@@ -3,6 +3,7 @@
 
 import argparse
 import os
+import colors
 
 directory = os.path.expanduser("~") + "/.colors"
 
@@ -37,9 +38,9 @@ def getKey(color, type):
     else:
         return "white"
 
-file = open(directory + "/" + getKey(color, type) + ".txt", "r")
-colorMod = file.read()
+
+key = getKey(color, type)
+colorMod = colors.colorDictionary[key]
 
 print colorMod+text
-file.close()
 
