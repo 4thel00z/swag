@@ -40,6 +40,6 @@ def getKey(color, type):
 file = open(directory + "/" + getKey(color, type) + ".txt", "r")
 colorMod = file.read()
 
-print colorMod,text
+print colorMod+text
 file.close()
 
