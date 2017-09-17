@@ -1,13 +1,11 @@
 #! env python
 # -*- coding: UTF-8 -*-
-
 from __future__ import print_function
 import os
 
 import argparse
 
 import colors
-from __future__ import print_function
 
 directory = os.path.expanduser("~") + "/.colors"
 

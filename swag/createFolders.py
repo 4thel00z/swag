@@ -1,8 +1,8 @@
 # -*- coding: UTF-8 -*-
+from __future__ import print_function
 import os
 
 import colors
-from __future__ import print_function
 
 
 def install(dest="default"):
