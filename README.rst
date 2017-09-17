@@ -39,15 +39,15 @@ Use from code
 
     from swag import colors
     print colors.COLORS["red"], "This will be red"
-    # Or use the SwagPrinter class:
+    # Or use the swagprinter helpers:
 
-    from swag.swagprinter import SwagPrinter, INTENSE
+    from swag import swagprinter
+    from swag.swagprinter import INTENSE
 
-    printer = SwagPrinter()
-    printer.print_green("Blah", INTENSE) # Prints an intense green
+    swagprinter.print_green("Blah", INTENSE) # Prints an intense green
 
     # Prints an intense green, to the end of the output:
-    printer.print_green("Blah", INTENSE, true)
+    swagprinter.print_green("Blah", INTENSE, true)
 
 
 Installation to a folder
