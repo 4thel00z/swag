@@ -1,11 +1,13 @@
 #! env python
 # -*- coding: UTF-8 -*-
 
+from __future__ import print_function
 import os
 
 import argparse
 
 import colors
+from __future__ import print_function
 
 directory = os.path.expanduser("~") + "/.colors"
 
@@ -59,7 +61,7 @@ def install(dest):
 def list():
     colorDictionary = colors.COLORS
     for i, key in enumerate(colorDictionary):
-        print colors.COLORS["reset"]+ colors.COLORS[key]+ key+colors.COLORS["reset"]
+        print (colors.COLORS["reset"] + colors.COLORS[key] + key + colors.COLORS["reset"])
 
 
 def main():
@@ -77,7 +79,7 @@ def main():
         text = args.text
         key = getKey(color, type)
         colorMod = colors.COLORS[key]
-        print colorMod + text
+        print(colorMod + text)
 
 
 if __name__ == '__main__':
