@@ -7,6 +7,8 @@ import argparse
 
 import colors
 
+
+
 directory = os.path.expanduser("~") + "/.colors"
 
 parser = argparse.ArgumentParser()
