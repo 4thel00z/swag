@@ -32,7 +32,7 @@ printParser.add_argument("-c", "--color", default="white",
 printParser.add_argument("-t", "--type", default="normal",
                          help="default = normal - format the string with either: normal|underline|background|bold|intense|intenseBold|intenseBackground")
 
-printParser.add_argument("text", type=str, default="", help="the text to prettyEcho")
+printParser.add_argument("text", type=str, default="", help="the text to swag up")
 
 
 def getKey(color, type):
