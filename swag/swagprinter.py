@@ -15,38 +15,46 @@ INTENSE_BOLD = "intenseBold"
 INTENSE_BACKGROUND = "intenseBackground"
 
 
-class SwagPrinter():
-    def _print_swaggy(self, color, content, modifier=None, continous=False):
-        if modifier is not None:
-            color = modifier + color.title()
-        text = "{}{}".format(color, content) \
-            if continous else "{}{}{}".format(color, content, colors.COLORS["reset"])
+def _print_swaggy(color, content, modifier=None, continous=False):
+    if modifier is not None:
+        color = modifier + color.title()
+    text = "{}{}".format(color, content) \
+        if continous else "{}{}{}".format(color, content, colors.COLORS["reset"])
 
-        print(text)
+    print(text)
 
-    def print_black(self, content, modifier=None, continous=False):
-        self._print_swaggy(colors.COLORS["black"], content, continous)
 
-    def print_yellow(self, content, modifier=None, continous=False):
-        self._print_swaggy(colors.COLORS["yellow"], content, continous)
+def print_black(content, modifier=None, continous=False):
+    _print_swaggy(colors.COLORS["black"], content, continous)
 
-    def print_green(self, content, modifier=None, continous=False):
-        self._print_swaggy(colors.COLORS["green"], content, continous)
 
-    def print_red(self, content, modifier=None, continous=False):
-        self._print_swaggy(colors.COLORS["red"], content, continous)
+def print_yellow(content, modifier=None, continous=False):
+    _print_swaggy(colors.COLORS["yellow"], content, continous)
 
-    def print_blue(self, content, modifier=None, continous=False):
-        self._print_swaggy(colors.COLORS["blue"], content, continous)
 
-    def print_purple(self, content, modifier=None, continous=False):
-        self._print_swaggy(colors.COLORS["purple"], content, continous)
+def print_green(content, modifier=None, continous=False):
+    _print_swaggy(colors.COLORS["green"], content, continous)
 
-    def print_white(self, content, modifier=None, continous=False):
-        self._print_swaggy(colors.COLORS["white"], content, continous)
 
-    def print_cyan(self, content, modifier=None, continous=False):
-        self._print_swaggy(colors.COLORS["cyan"], content, continous)
+def print_red(content, modifier=None, continous=False):
+    _print_swaggy(colors.COLORS["red"], content, continous)
 
-    def reset(self):
-        print(colors.COLORS["reset"])
+
+def print_blue(content, modifier=None, continous=False):
+    _print_swaggy(colors.COLORS["blue"], content, continous)
+
+
+def print_purple(content, modifier=None, continous=False):
+    _print_swaggy(colors.COLORS["purple"], content, continous)
+
+
+def print_white(content, modifier=None, continous=False):
+    _print_swaggy(colors.COLORS["white"], content, continous)
+
+
+def print_cyan(content, modifier=None, continous=False):
+    _print_swaggy(colors.COLORS["cyan"], content, continous)
+
+
+def reset():
+    print(colors.COLORS["reset"])
