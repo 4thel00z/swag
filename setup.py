@@ -21,17 +21,17 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='1.1.0',
+    version='1.2.1',
 
     description='Swag up your shell output with escape code magic!',
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/mwheregroup/swag',
+    url='https://github.com/4thel00z/swag',
 
     # Author details
     author='ransomware',
-    author_email='117eazy@gmail.com',
+    author_email='4thel00z@gmail.com',
 
     # Choose your license
     license='License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
