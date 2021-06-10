@@ -5,7 +5,7 @@ import os
 
 import argparse
 
-import colors
+from swag import colors
 
 
 
@@ -54,7 +54,7 @@ def getKey(color, type):
 
 
 def install(dest):
-    import createFolders
+    from swag import createFolders
     createFolders.install(dest)
 
 

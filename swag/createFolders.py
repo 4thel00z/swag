@@ -2,7 +2,7 @@
 from __future__ import print_function
 import os
 
-import colors
+from swag import colors
 
 
 def install(dest="default"):
