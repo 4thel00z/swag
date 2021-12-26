@@ -8,6 +8,8 @@ readme = "README.md"
 packages = [
     { include = "swag" }
 ]
+homepage = "https://github.com/4thel00z/swag"
+
 
 [tool.poetry.scripts]
 swag = 'swag.__main__:app'
