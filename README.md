@@ -81,3 +81,6 @@ green("This is green until the end", modifier=INTENSE, continuous=True)
 print("This will still be green")
 reset()  # From now on the default cli color will be used
 ```
+## License
+
+This project is licensed under the GPL-3 license.
