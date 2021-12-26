@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "swag"
-version = "1.7.0"
+version = "1.7.1"
 description = "Swag up your shell output with escape code magic!"
 authors = ["4thel00z <4thel00z@gmail.com>"]
 license = "GPL-3"
@@ -10,7 +10,7 @@ packages = [
 ]
 
 [tool.poetry.scripts]
-swag = 'swag.__main__:main'
+swag = 'swag.__main__:app'
 
 [tool.poetry.dependencies]
 python = ">=3.6,<4.0"
