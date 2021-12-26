@@ -10,49 +10,49 @@ Color your shell output with escape code magic.
 
 ## Usage
 
-
 ```
-usage: swag [-h] {print,install} ...
+Usage: swag [OPTIONS] COMMAND [ARGS]...
 
-positional arguments:
-  {print,install}  [command] help
-    install        install the colors to the folder of choice
-    print          prints the text with the specified color and type to the
-                   console
+Options:
+  --install-completion [bash|zsh|fish|powershell|pwsh]
+                                  Install completion for the specified shell.
+  --show-completion [bash|zsh|fish|powershell|pwsh]
+                                  Show completion for the specified shell, to
+                                  copy it or customize the installation.
 
-optional arguments:
-  -h, --help       show this help message and exit
+  --help                          Show this message and exit.
+
+Commands:
+  install
+  list
+  print
 ```
 
-## Raw Usage
+## CLI Usage
 
+### Print to the cli
 
+You can print colored from the shell as follows:
 
-### Use from code
-
+```shell
+swag print --color yellow --modifier intenseBold "This text will be intenseBold and yellow :-)"
 ```
-from swag import colors
-print colors.COLORS["red"], "This will be red"
 
-# Or use the swagprinter helpers:
+The possible modifiers are:
 
-
-from swag import swagprinter
-from swag.swagprinter import INTENSE
-
-swagprinter.print_green("Blah", INTENSE) # Prints an intense green
-
-# Prints an intense green, to the end of the output:
-swagprinter.print_green("Blah", INTENSE, true)
-
-```
+* underline
+* background
+* bold
+* intense
+* intenseBold
+* intenseBackground
 
 ### Installation to a folder
 
-From the commandline do
+From the commandline do:
 
-```
-swag install -d <path/to/folder> # default is ~/.colors
+```shell
+swag install --dest <path/to/folder> # default is ~/.colors
 ```
 
 This will install all the escape codes to the ~/.colors or <path/to/folder> folder.
@@ -60,3 +60,24 @@ This will install all the escape codes to the ~/.colors or <path/to/folder> fold
 Now you can use the colors directly from the console via:
 
 `echo $(cat ~/.colors/blue) This will be blue`
+
+### List all colors
+
+Prints a list of colors (color coded).
+
+```shell
+swag list
+```
+
+## Use from code
+
+```python
+from swag import red, green, reset, INTENSE
+
+red("This will be red")
+green("Blah", modifier=INTENSE)  # Prints an intense green
+# Prints an intense green, to the end of the output, means if you use print after it will be green too:
+green("This is green until the end", modifier=INTENSE, continuous=True)
+print("This will still be green")
+reset()  # From now on the default cli color will be used
+```
