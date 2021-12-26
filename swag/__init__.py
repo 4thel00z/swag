@@ -12,4 +12,11 @@ __all__ = [
     "cyan",
     "reset",
     "clear",
+    "colors",
+    "BOLD",
+    "UNDERLINE",
+    "BACKGROUND",
+    "INTENSE",
+    "INTENSE_BOLD",
+    "INTENSE_BACKGROUND",
 ]

@@ -6,27 +6,11 @@ from typing import Optional
 
 import typer
 
+import swag
 from swag import colors
 
 TYPE_MODIFIERS = ['underline', 'background', 'bold', 'intense', 'intenseBold', 'intenseBackground']
 COLOR_MODIFIERS = ['black', 'red', 'green', 'yellow', 'blue', 'purple', 'cyan', 'white']
-
-
-def get_key(color, type):
-    if type == "normal":
-        if color.lower() in COLOR_MODIFIERS:
-            return color
-        else:
-            return "white"
-
-    elif type.lower() in TYPE_MODIFIERS:
-        if color.lower() in COLOR_MODIFIERS:
-            return type.lower() + color.lower().capitalize()
-        else:
-            return type.lower() + "White"
-    else:
-        return "white"
-
 
 app = typer.Typer(
     name="swag",
@@ -46,12 +30,11 @@ def install_handler(dest: Optional[str] = None):
 )
 def print_handler(
         text: str,
+        reset: bool = True,
         color: str = "white",
-        type: str = "normal",
+        modifier: str = "normal",
 ):
-    key = get_key(color, type)
-    c = colors.COLORS
-    print(f'{c["reset"]}{c[key]}{text}{c["reset"]}')
+    swag.swag(color, text, modifier=modifier, continuous=not reset)
 
 
 @app.command(

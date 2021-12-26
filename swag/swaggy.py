@@ -1,5 +1,6 @@
-from swag import colors
 from sys import stdout
+
+from swag import colors
 
 BOLD = "bold"
 UNDERLINE = "underline"
@@ -10,47 +11,52 @@ INTENSE_BOLD = "intenseBold"
 INTENSE_BACKGROUND = "intenseBackground"
 
 
-def swag(text, content, modifier=None, continuous=False, file=stdout):
+def swag(color_name, content, modifier=None, continuous=False, file=stdout):
+
     if modifier is not None:
-        text = modifier + text.title()
+        color_name = modifier + color_name.title()
+
+    color = colors.COLORS[color_name]
+
     text = (
-        "{0}{1}".format(text, content)
+        "{0}{1}".format(color, content)
         if continuous
-        else "{0}{1}{2}".format(text, content, colors.COLORS["reset"])
+        else "{0}{1}{2}".format(color, content, colors.COLORS["reset"])
     )
-    print(text, file=stdout)
+
+    print(text, file=file)
 
 
-def black(content, modifier=None, continuous=False):
-    swag(colors.COLORS["black"], content, modifier, continuous)
+def black(content, modifier=None, continuous=False, file=stdout):
+    swag("black", content, modifier, continuous, file=file)
 
 
-def yellow(content, modifier=None, continuous=False):
-    swag(colors.COLORS["yellow"], content, modifier, continuous)
+def yellow(content, modifier=None, continuous=False, file=stdout):
+    swag("yellow", content, modifier, continuous, file=file)
 
 
-def green(content, modifier=None, continuous=False):
-    swag(colors.COLORS["green"], content, modifier, continuous)
+def green(content, modifier=None, continuous=False, file=stdout):
+    swag("green", content, modifier, continuous, file=file)
 
 
-def red(content, modifier=None, continuous=False):
-    swag(colors.COLORS["red"], content, modifier, continuous)
+def red(content, modifier=None, continuous=False, file=stdout):
+    swag("red", content, modifier, continuous, file=file)
 
 
-def blue(content, modifier=None, continuous=False):
-    swag(colors.COLORS["blue"], content, modifier, continuous)
+def blue(content, modifier=None, continuous=False, file=stdout):
+    swag("blue", content, modifier, continuous, file=file)
 
 
-def purple(content, modifier=None, continuous=False):
-    swag(colors.COLORS["purple"], content, modifier, continuous)
+def purple(content, modifier=None, continuous=False, file=stdout):
+    swag("purple", content, modifier, continuous, file=file)
 
 
-def white(content, modifier=None, continuous=False):
-    swag(colors.COLORS["white"], content, modifier, continuous)
+def white(content, modifier=None, continuous=False, file=stdout):
+    swag("white", content, modifier, continuous, file=file)
 
 
-def cyan(content, modifier=None, continuous=False):
-    swag(colors.COLORS["cyan"], content, modifier, continuous)
+def cyan(content, modifier=None, continuous=False, file=stdout):
+    swag("cyan", content, modifier, continuous, file=file)
 
 
 def reset():
