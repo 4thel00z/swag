@@ -5,10 +5,9 @@ from swag import colors
 
 
 def install(dest=None):
+    directory = dest
     if not dest:
-        directory = os.path.expanduser("~") + "/.colors"
-    else:
-        directory = dest
+        directory = os.environ.get("HOME", os.path.expanduser("~")) + "/.colors"
 
     c = colors.COLORS
 

@@ -7,21 +7,49 @@ UNDERLINE = "underline"
 BACKGROUND = "background"
 
 INTENSE = "intense"
-INTENSE_BOLD = "intenseBold"
-INTENSE_BACKGROUND = "intenseBackground"
+INTENSE_BOLD = "intense_bold"
+INTENSE_BACKGROUND = "intense_background"
 
 
 def swag(color_name, content, modifier=None, continuous=False, file=stdout):
+    """
+    Swag prints colored text to the console.
+    The following colors are available:
+    - black
+    - yellow
+    - green
+    - red
+    - blue
+    - purple
+    - white
+    - cyan
 
+    Also available are the following modifiers:
+    - bold
+    - underline
+    - background
+    - intense
+    - intense_bold
+    - intense_background
+
+    The color_name and modifier are case-insensitive.
+
+    :param color_name:
+    :param content:
+    :param modifier:
+    :param continuous:
+    :param file:
+    :return:
+    """
     if modifier is not None:
-        color_name = modifier + color_name.title()
+        color_name = "_".join([modifier.lower(), color_name.lower()])
 
     color = colors.COLORS[color_name]
 
     text = (
-        "{0}{1}".format(color, content)
+        f"{color}{content}"
         if continuous
-        else "{0}{1}{2}".format(color, content, colors.COLORS["reset"])
+        else f"{color}{content}{colors.COLORS['reset']}"
     )
 
     print(text, file=file)
@@ -64,4 +92,4 @@ def reset():
 
 
 def clear():
-    print("\x1b[2J\x1b[H")
+    print(colors.COLORS["clear"])

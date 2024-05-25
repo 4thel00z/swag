@@ -1,4 +1,23 @@
-from swag.swaggy import *
+from swag.colors import colors
+from swag.swaggy import (
+    swag,
+    black,
+    yellow,
+    green,
+    red,
+    blue,
+    purple,
+    white,
+    cyan,
+    reset,
+    clear,
+    BOLD,
+    UNDERLINE,
+    BACKGROUND,
+    INTENSE,
+    INTENSE_BOLD,
+    INTENSE_BACKGROUND,
+)
 
 __all__ = [
     "swag",
@@ -19,4 +38,5 @@ __all__ = [
     "INTENSE",
     "INTENSE_BOLD",
     "INTENSE_BACKGROUND",
+    "colors"
 ]

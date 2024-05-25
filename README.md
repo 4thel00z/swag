@@ -35,7 +35,7 @@ Commands:
 You can print colored from the shell as follows:
 
 ```shell
-swag print --color yellow --modifier intenseBold "This text will be intenseBold and yellow :-)"
+swag print --color yellow --modifier intense_bold "This text will be intense_bold and yellow :-)"
 ```
 
 The possible modifiers are:
@@ -44,8 +44,8 @@ The possible modifiers are:
 * background
 * bold
 * intense
-* intenseBold
-* intenseBackground
+* intense_bold
+* intense_background
 
 ### Installation to a folder
 
@@ -71,6 +71,8 @@ swag list
 
 ## Use from code
 
+### Print to the console
+
 ```python
 from swag import red, green, reset, INTENSE
 
@@ -81,6 +83,14 @@ green("This is green until the end", modifier=INTENSE, continuous=True)
 print("This will still be green")
 reset()  # From now on the default cli color will be used
 ```
+
+### Use the colors in a string
+
+```python
+from swag import colors
+print(f"{colors.red}This will be red{colors.reset}")
+```
+
 ## License
 
 This project is licensed under the GPL-3 license.
