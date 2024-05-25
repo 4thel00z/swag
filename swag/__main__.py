@@ -8,6 +8,7 @@ import typer
 
 import swag
 from swag import colors
+from swag.colors import COLORS
 
 TYPE_MODIFIERS = ['underline', 'background', 'bold', 'intense', 'intenseBold', 'intenseBackground']
 COLOR_MODIFIERS = ['black', 'red', 'green', 'yellow', 'blue', 'purple', 'cyan', 'white']
@@ -41,9 +42,9 @@ def print_handler(
     name="list",
 )
 def list_handler():
-    c = colors.COLORS
+    c = COLORS
     for i, key in enumerate(c):
-        print(colors.COLORS["reset"] + c[key] + key + c["reset"])
+        print(colors.reset + c[key] + key + colors.reset)
 
 
 if __name__ == '__main__':
