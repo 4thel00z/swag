@@ -2,7 +2,7 @@
 
 Color your shell output with escape code magic.
 
-![Demo](https://media.giphy.com/media/l0O5ASEoXnoaMd3S8/source.gif)
+[![Demo](https://asciinema.org/a/fciEE57CeLkKBQl5uoU51rgPR.svg)](https://asciinema.org/a/fciEE57CeLkKBQl5uoU51rgPR)
 
 ## Installation
 
