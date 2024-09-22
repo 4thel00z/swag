@@ -1,6 +1,6 @@
 from sys import stdout
 
-from swag import colors
+from swag.colors import colors_attr, COLORS
 
 BOLD = "bold"
 UNDERLINE = "underline"
@@ -44,12 +44,12 @@ def swag(color_name, content, modifier=None, continuous=False, file=stdout):
     if modifier is not None:
         color_name = "_".join([modifier.lower(), color_name.lower()])
 
-    color = colors.COLORS[color_name]
+    color = COLORS[color_name]
 
     text = (
         f"{color}{content}"
         if continuous
-        else f"{color}{content}{colors.COLORS['reset']}"
+        else f"{color}{content}{colors_attr.reset}"
     )
 
     print(text, file=file)
@@ -88,8 +88,8 @@ def cyan(content, modifier=None, continuous=False, file=stdout):
 
 
 def reset():
-    print(colors.COLORS["reset"])
+    print(colors_attr.reset)
 
 
 def clear():
-    print(colors.COLORS["clear"])
+    print(colors_attr.clear)

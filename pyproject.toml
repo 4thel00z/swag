@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "swag"
-version = "2.0.2"
+version = "2.0.3"
 description = "Swag up your shell output with escape code magic!"
 authors = ["4thel00z <4thel00z@gmail.com>"]
 license = "GPL-3"

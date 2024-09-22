@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 import os
 
-from swag import colors
+from swag.colors import COLORS
 
 
 def install(dest=None):
@@ -9,7 +9,7 @@ def install(dest=None):
     if not dest:
         directory = os.environ.get("HOME", os.path.expanduser("~")) + "/.colors"
 
-    c = colors.COLORS
+    c = COLORS
 
     if not os.path.exists(directory):
         os.makedirs(directory)

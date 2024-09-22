@@ -89,4 +89,4 @@ class AttrDict(dict):
         except KeyError:
             raise AttributeError(f"No such attribute: {name}")
 
-colors = AttrDict(COLORS)
+colors_attr = AttrDict(COLORS)
