@@ -1,4 +1,4 @@
-from swag.colors import colors
+from swag.colors import colors_attr
 from swag.swaggy import (
     swag,
     black,
@@ -38,5 +38,5 @@ __all__ = [
     "INTENSE",
     "INTENSE_BOLD",
     "INTENSE_BACKGROUND",
-    "colors"
+    "colors_attr"
 ]
